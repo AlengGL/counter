@@ -1,0 +1,89 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* 設定動畫 也可稱為影格 與Animation有關*/
+@keyframes rotate {
+    0% { transform: rotate(var(--current-angle)deg); }
+    100% { transform: rotate(calc(var(--current-angle) + 360deg)); }
+}
+  
+@keyframes rotateReverse {
+    0% { transform: rotate(var(--current-angle)deg); }
+    100% { transform: rotate(calc(var(--current-angle) - 360deg)); }
+}  
+
+.counter {
+    user-select: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-color: rgb(210, 66, 66);
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.clock {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hole {
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: rgb(210, 66, 66);
+    transform-origin: 50% 90%;
+    animation: rotate 1s linear infinite;
+    left: 45%;
+    top: 15%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    font-size: 200px;
+    color: #fff;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+
+.bx-info-circle::before {
+    font-size: 50px;
+}
+
+.fa-solid::before {
+    font-size: 150px;
+}
+
+.fa-solid.fa-arrow-up {
+    transition: transform 0.5s ease-in-out;
+    transform-origin: 50% 50%;
+}
