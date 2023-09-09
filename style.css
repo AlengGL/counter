@@ -3,17 +3,6 @@ body {
     margin: 0;
 }
 
-/* 設定動畫 也可稱為影格 與Animation有關*/
-@keyframes rotate {
-    0% { transform: rotate(var(--current-angle)deg); }
-    100% { transform: rotate(calc(var(--current-angle) + 360deg)); }
-}
-  
-@keyframes rotateReverse {
-    0% { transform: rotate(var(--current-angle)deg); }
-    100% { transform: rotate(calc(var(--current-angle) - 360deg)); }
-}  
-
 .counter {
     user-select: none;
     cursor: pointer;
@@ -73,7 +62,6 @@ body {
     justify-content: space-between;
     align-items: end;
 }
-
 
 .bx-info-circle::before {
     font-size: 50px;
