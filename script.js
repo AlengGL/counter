@@ -38,7 +38,6 @@ function updateHoleRotation() {
   if (!isRunning) return;
   const current = performance.now();
   const timeElapsed = isUp ? (current - startTime + elapsedMs) : (elapsedMs - (current - startTime));
-  console.log(timeElapsed)
   // 這裡直接將timeElapsed轉換為角度
   currentAngle = (timeElapsed % 1000) * 0.36; // 0.36 = 360/1000
   
