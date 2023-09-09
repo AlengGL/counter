@@ -1,4 +1,3 @@
-![image](https://github.com/AlengGL/counter/assets/143769558/23e214b0-9f20-4f35-b53e-06e55e264add)# counter
 
 |Result|
 |------|
